@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-21T01:09:38.296007" rpa="false" schemaversion="5">
+<suite id="s1" name="pythonProject" source="C:\Users\rajiv\PycharmProjects\RobotFramework\pythonProject">
+<suite id="s1-s1" name="Tests" source="C:\Users\rajiv\PycharmProjects\RobotFramework\pythonProject\tests">
+<suite id="s1-s1-s1" name="testDemo1" source="C:\Users\rajiv\PycharmProjects\RobotFramework\pythonProject\tests\testDemo1.robot">
+<test id="s1-s1-s1-t1" name="Validate Successful login" line="12">
+<kw name="Open the browser with the Mortgage payment URL">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-04-21T01:09:38.509435" level="INFO">Creating an instance of the Edge WebDriver.</msg>
+<arg>Edge</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-04-21T01:09:38.509325" elapsed="4.666116"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-04-21T01:09:43.176117" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-04-21T01:09:43.175717" elapsed="0.402767"/>
+</kw>
+<status status="PASS" start="2025-04-21T01:09:38.508792" elapsed="5.069825"/>
+</kw>
+<status status="PASS" start="2025-04-21T01:09:38.508039" elapsed="5.071152"/>
+</test>
+<doc>To validate the login form</doc>
+<status status="PASS" start="2025-04-21T01:09:38.314899" elapsed="5.265354"/>
+</suite>
+<status status="PASS" start="2025-04-21T01:09:38.314000" elapsed="5.267816"/>
+</suite>
+<status status="PASS" start="2025-04-21T01:09:38.296901" elapsed="5.286062"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="pythonProject" id="s1" pass="1" fail="0" skip="0">pythonProject</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">pythonProject.Tests</stat>
+<stat name="testDemo1" id="s1-s1-s1" pass="1" fail="0" skip="0">pythonProject.Tests.testDemo1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

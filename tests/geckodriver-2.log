@@ -1,0 +1,21 @@
+1745401447377	geckodriver	INFO	Listening on 127.0.0.1:52851
+1745401450459	mozrunner::runner	INFO	Running command: "C:\\Users\\rajiv\\.cache\\selenium\\firefox\\win64\\137.0.2\\firefox.exe" "--marionette" "--remote-debuggin ... 2" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\rajiv\\AppData\\Local\\Temp\\rust_mozprofile0fgkOU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1745401450698	Marionette	INFO	Marionette enabled
+1745401450816	Marionette	INFO	Listening on port 52863
+WebDriver BiDi listening on ws://127.0.0.1:52852
+Read port: 52863
+1745401450936	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52852/devtools/browser/d944e004-e030-4cef-871d-73599ca180d9
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rahulshettyacademy.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://rahulshettyacademy.com."
+JavaScript warning: https://rahulshettyacademy.com/angularpractice/polyfills.b6b2cd0d4c472ac3ac12.bundle.js, line 1: Script terminated by timeout at:
+get@https://rahulshettyacademy.com/angularpractice/polyfills.b6b2cd0d4c472ac3ac12.bundle.js:1:20536
+ZSR1/</e.invokeTask@https://rahulshettyacademy.com/angularpractice/polyfills.b6b2cd0d4c472ac3ac12.bundle.js:1:20436
+k@https://rahulshettyacademy.com/angularpractice/polyfills.b6b2cd0d4c472ac3ac12.bundle.js:1:31400
+m@https://rahulshettyacademy.com/angularpractice/polyfills.b6b2cd0d4c472ac3ac12.bundle.js:1:31812
+
+1745401494031	Marionette	INFO	Stopped listening on port 52863
+Dynamically enable window occlusion 1
