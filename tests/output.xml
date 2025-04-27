@@ -1,229 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-27T16:45:45.322267" rpa="false" schemaversion="5">
-<suite id="s1" name="testDemo2" source="C:\Users\rajiv\PycharmProjects\RobotFramework\pythonProject\tests\testDemo2.robot">
-<test id="s1-t1" name="Validate Successful login" line="17">
-<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
-<kw name="Open the browser with the URL" owner="generic">
-<kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2025-04-27T16:45:45.527024" level="INFO">Creating an instance of the Edge WebDriver.</msg>
-<arg>${browser}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2025-04-27T16:45:45.526921" elapsed="1.317629"/>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-04-27T20:26:41.059698" rpa="false" schemaversion="5">
+<suite id="s1" name="testDemo7" source="C:\Users\rajiv\PycharmProjects\RobotFramework\pythonProject\tests\testDemo7.robot">
+<test id="s1-t1" name="Play around with Dictionary" line="12">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-27T20:26:41.351639" level="INFO">&amp;{rajDetails} = { Name=Rajiv | Age=30 | Gender=Male | MaritalStatus=Married }</msg>
+<var>&amp;{rajDetails}</var>
+<arg>Name=Rajiv</arg>
+<arg>Age=30</arg>
+<arg>Gender=Male</arg>
+<arg>MaritalStatus=Married</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.351390" elapsed="0.000278"/>
 </kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-04-27T16:45:46.844971" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
-<arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-04-27T16:45:46.844783" elapsed="0.442215"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-27T20:26:41.351951" level="INFO">{'Name': 'Rajiv', 'Age': '30', 'Gender': 'Male', 'MaritalStatus': 'Married'}</msg>
+<arg>${rajDetails}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.351838" elapsed="0.000145"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-27T16:45:47.287375" elapsed="0.052904"/>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${rajDetails}</arg>
+<arg>Gender</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.352098" elapsed="0.000098"/>
 </kw>
-<status status="PASS" start="2025-04-27T16:45:45.526752" elapsed="1.813755"/>
+<kw name="Get From Dictionary" owner="Collections">
+<arg>${rajDetails}</arg>
+<arg>Age</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.352297" elapsed="0.000077"/>
 </kw>
-<kw name="Fill the login form" owner="generic">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-27T16:45:47.342351" level="INFO">Typing text 'rahulshettyacademy' into text field 'id:username'.</msg>
-<arg>id:username</arg>
-<arg>${user_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-27T16:45:47.341643" elapsed="0.142122"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-27T16:45:47.484151" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg time="2025-04-27T16:45:47.518408" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>id:password</arg>
-<arg>${password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-27T16:45:47.483938" elapsed="0.076388"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-27T16:45:47.560688" level="INFO">Clicking button 'id:signInBtn'.</msg>
-<arg>id:signInBtn</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-27T16:45:47.560512" elapsed="0.065167"/>
-</kw>
-<arg>${username}</arg>
-<arg>${validPassword}</arg>
-<status status="PASS" start="2025-04-27T16:45:47.340972" elapsed="0.284842"/>
-</kw>
-<arg>Open the browser with the URL</arg>
-<arg>AND</arg>
-<arg>generic.Fill the login form</arg>
-<arg>${username}</arg>
-<arg>${validPassword}</arg>
-<doc>Executes all the given keywords in a sequence.</doc>
-<status status="PASS" start="2025-04-27T16:45:45.526547" elapsed="2.099342"/>
-</kw>
-<kw name="Wait until element is visible in the webpage" owner="shopPage">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${homePageElement}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-27T16:45:47.626474" elapsed="3.013448"/>
-</kw>
-<status status="PASS" start="2025-04-27T16:45:47.626243" elapsed="3.013935"/>
-</kw>
-<kw name="Verify card titles in the shop page" owner="shopPage">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2025-04-27T16:45:50.641938" level="INFO">@{expectedList} = [ iphone X | Samsung Note 8 | Nokia Edge | Blackberry ]</msg>
-<var>@{expectedList}</var>
-<arg>iphone X</arg>
-<arg>Samsung Note 8</arg>
-<arg>Nokia Edge</arg>
-<arg>Blackberry</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.641607" elapsed="0.000390"/>
-</kw>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-04-27T16:45:50.653351" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="90221f17cedea1c4b7201e2594c65f0f", element="f.22EDF4452F7A8A2926D47B13B8FC5D6C.d.934CE509643FCDEEBE229B4DF9B664A1.e.74")&gt;, &lt;selenium.webdriv...</msg>
-<var>${elements}</var>
-<arg>${cardNamesLocator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.642306" elapsed="0.011135"/>
-</kw>
-<kw name="Create List" owner="BuiltIn">
-<msg time="2025-04-27T16:45:50.653997" level="INFO">@{actualList} = [ ]</msg>
-<var>@{actualList}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.653722" elapsed="0.000326"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${actualList}</arg>
-<arg>${elements.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.654797" elapsed="0.013328"/>
-</kw>
-<var name="${elements}">&lt;selenium.webdriver.remote.webelement.WebElement (session="90221f17cedea1c4b7201e2594c65f0f", element="f.22EDF4452F7A8A2926D47B13B8FC5D6C.d.934CE509643FCDEEBE229B4DF9B664A1.e.74")&gt;</var>
-<status status="PASS" start="2025-04-27T16:45:50.654587" elapsed="0.013691"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${actualList}</arg>
-<arg>${elements.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.668926" elapsed="0.009500"/>
-</kw>
-<var name="${elements}">&lt;selenium.webdriver.remote.webelement.WebElement (session="90221f17cedea1c4b7201e2594c65f0f", element="f.22EDF4452F7A8A2926D47B13B8FC5D6C.d.934CE509643FCDEEBE229B4DF9B664A1.e.37")&gt;</var>
-<status status="PASS" start="2025-04-27T16:45:50.668554" elapsed="0.010074"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${actualList}</arg>
-<arg>${elements.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.679095" elapsed="0.011364"/>
-</kw>
-<var name="${elements}">&lt;selenium.webdriver.remote.webelement.WebElement (session="90221f17cedea1c4b7201e2594c65f0f", element="f.22EDF4452F7A8A2926D47B13B8FC5D6C.d.934CE509643FCDEEBE229B4DF9B664A1.e.75")&gt;</var>
-<status status="PASS" start="2025-04-27T16:45:50.678893" elapsed="0.011744"/>
-</iter>
-<iter>
-<kw name="Append To List" owner="Collections">
-<arg>${actualList}</arg>
-<arg>${elements.text}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.691095" elapsed="0.010629"/>
-</kw>
-<var name="${elements}">&lt;selenium.webdriver.remote.webelement.WebElement (session="90221f17cedea1c4b7201e2594c65f0f", element="f.22EDF4452F7A8A2926D47B13B8FC5D6C.d.934CE509643FCDEEBE229B4DF9B664A1.e.76")&gt;</var>
-<status status="PASS" start="2025-04-27T16:45:50.690889" elapsed="0.011026"/>
-</iter>
-<var>${elements}</var>
-<value>@{elements}</value>
-<status status="PASS" start="2025-04-27T16:45:50.654187" elapsed="0.048023"/>
-</for>
-<kw name="Lists Should Be Equal" owner="Collections">
-<arg>${expectedList}</arg>
-<arg>${actualList}</arg>
-<doc>Fails if given lists are unequal.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.702436" elapsed="0.000180"/>
-</kw>
-<status status="PASS" start="2025-04-27T16:45:50.641228" elapsed="0.061433"/>
-</kw>
-<kw name="Select the add button of the given Card" owner="shopPage">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-04-27T16:45:50.703860" level="INFO">${index} = 1</msg>
-<var>${index}</var>
-<arg>1</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.703596" elapsed="0.000319"/>
-</kw>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-04-27T16:45:50.712158" level="INFO">@{elements} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="90221f17cedea1c4b7201e2594c65f0f", element="f.22EDF4452F7A8A2926D47B13B8FC5D6C.d.934CE509643FCDEEBE229B4DF9B664A1.e.74")&gt; | &lt;selenium.webdr...</msg>
-<var>@{elements}</var>
-<arg>${cardNamesLocator}</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.704123" elapsed="0.008382"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<arg>'${elements.text}' == '${cardName}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.713300" elapsed="0.010922"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-04-27T16:45:50.724927" level="INFO">${index} = 2</msg>
-<var>${index}</var>
-<arg>${index}+1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.724518" elapsed="0.000464"/>
-</kw>
-<var name="${elements}">&lt;selenium.webdriver.remote.webelement.WebElement (session="90221f17cedea1c4b7201e2594c65f0f", element="f.22EDF4452F7A8A2926D47B13B8FC5D6C.d.934CE509643FCDEEBE229B4DF9B664A1.e.74")&gt;</var>
-<status status="PASS" start="2025-04-27T16:45:50.713031" elapsed="0.012041"/>
-</iter>
-<iter>
-<kw name="Exit For Loop If" owner="BuiltIn">
-<msg time="2025-04-27T16:45:50.736634" level="INFO">Exiting for loop altogether.</msg>
-<arg>'${elements.text}' == '${cardName}'</arg>
-<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.725540" elapsed="0.011194"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<var>${index}</var>
-<arg>${index}+1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2025-04-27T16:45:50.736900" elapsed="0.000042"/>
-</kw>
-<var name="${elements}">&lt;selenium.webdriver.remote.webelement.WebElement (session="90221f17cedea1c4b7201e2594c65f0f", element="f.22EDF4452F7A8A2926D47B13B8FC5D6C.d.934CE509643FCDEEBE229B4DF9B664A1.e.37")&gt;</var>
-<status status="PASS" start="2025-04-27T16:45:50.725354" elapsed="0.011636"/>
-</iter>
-<var>${elements}</var>
-<value>@{elements}</value>
-<status status="PASS" start="2025-04-27T16:45:50.712702" elapsed="0.024341"/>
-</for>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-27T16:45:50.737412" level="INFO">Clicking button 'xpath:(//div[@class ='card-footer'])[2]/button'.</msg>
-<arg>xpath:(//div[@class ='card-footer'])[${index}]/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.737186" elapsed="0.076573"/>
-</kw>
-<arg>Samsung Note 8</arg>
-<status status="PASS" start="2025-04-27T16:45:50.703104" elapsed="0.110860"/>
-</kw>
-<kw name="Close the browser session" owner="generic" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-27T16:45:50.815136" elapsed="2.233679"/>
-</kw>
-<status status="PASS" start="2025-04-27T16:45:50.814670" elapsed="2.234361"/>
-</kw>
-<tag>SMOKE</tag>
-<status status="PASS" start="2025-04-27T16:45:45.525845" elapsed="7.523456"/>
+<status status="PASS" start="2025-04-27T20:26:41.350864" elapsed="0.001612"/>
 </test>
-<doc>To validate the login form</doc>
-<status status="PASS" start="2025-04-27T16:45:45.323211" elapsed="7.727578"/>
+<test id="s1-t2" name="Add book into Library Database" line="18">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-27T20:26:41.353464" level="INFO">&amp;{req_body} = { name=TestTech | isbn=blow | aisle=9000 | author=Waja }</msg>
+<var>&amp;{req_body}</var>
+<arg>name=${book_name}</arg>
+<arg>isbn=blow</arg>
+<arg>aisle=9000</arg>
+<arg>author=Waja</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.353218" elapsed="0.000274"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2025-04-27T20:26:41.698756" level="INFO">POST Request : url=https://rahulshettyacademy.com/Library/Addbook.php 
+ path_url=/Library/Addbook.php 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '71', 'Content-Type': 'application/json'} 
+ body=b'{"name": "TestTech", "isbn": "blow", "aisle": "9000", "author": "Waja"}' 
+ </msg>
+<msg time="2025-04-27T20:26:41.698969" level="INFO">POST Response : url=https://rahulshettyacademy.com/Library/Addbook.php 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 27 Apr 2025 14:56:42 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '44', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'} 
+ body={"Msg":"successfully added","ID":"blow9000"} 
+ </msg>
+<msg time="2025-04-27T20:26:41.699165" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${base_url}/Library/Addbook.php</arg>
+<arg>json=${req_body}</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.353641" elapsed="0.345568"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-27T20:26:41.701149" level="INFO">{'Msg': 'successfully added', 'ID': 'blow9000'}</msg>
+<arg>${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.700325" elapsed="0.000895"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>Msg</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.701522" elapsed="0.000633"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>ID</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.702436" elapsed="0.000577"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-04-27T20:26:41.703815" level="INFO">${actualMsg} = successfully added</msg>
+<var>${actualMsg}</var>
+<arg>${response.json()}</arg>
+<arg>Msg</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.703265" elapsed="0.000585"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>successfully added</arg>
+<arg>${actualMsg}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.704093" elapsed="0.000209"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-04-27T20:26:41.705054" level="INFO">${book_ID} = blow9000</msg>
+<var>${book_ID}</var>
+<arg>${response.json()}</arg>
+<arg>ID</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.704530" elapsed="0.000556"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-04-27T20:26:41.705550" level="INFO">${book_ID} = blow9000</msg>
+<arg>${book_ID}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.705334" elapsed="0.000268"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-27T20:26:41.706133" level="INFO">blow9000</msg>
+<arg>${book_ID}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.705975" elapsed="0.000210"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.706390" elapsed="0.000246"/>
+</kw>
+<status status="PASS" start="2025-04-27T20:26:41.352745" elapsed="0.354108"/>
+</test>
+<test id="s1-t3" name="Get the book details which got added" line="31">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-04-27T20:26:42.005437" level="INFO">GET Request : url=https://rahulshettyacademy.com/Library/GetBook.php?ID=blow9000 
+ path_url=/Library/GetBook.php?ID=blow9000 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2025-04-27T20:26:42.005612" level="INFO">GET Response : url=https://rahulshettyacademy.com/Library/GetBook.php?ID=blow9000 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 27 Apr 2025 14:56:42 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '71', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'} 
+ body=[{"book_name":"TestTech","isbn":"blow","aisle":"9000","author":"Waja"}] 
+ </msg>
+<msg time="2025-04-27T20:26:42.005940" level="INFO">${get_response} = &lt;Response [200]&gt;</msg>
+<var>${get_response}</var>
+<arg>${base_url}/Library/GetBook.php</arg>
+<arg>params=ID=${book_ID}</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2025-04-27T20:26:41.707900" elapsed="0.298109"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-27T20:26:42.008032" level="INFO">[{'book_name': 'TestTech', 'isbn': 'blow', 'aisle': '9000', 'author': 'Waja'}]</msg>
+<arg>${get_response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-27T20:26:42.007165" elapsed="0.001248"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${book_name}</arg>
+<arg>${get_response.json()}[0][book_name]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-27T20:26:42.008795" elapsed="0.000786"/>
+</kw>
+<status status="PASS" start="2025-04-27T20:26:41.707429" elapsed="0.302458"/>
+</test>
+<test id="s1-t4" name="Delete the book from database" line="37">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-27T20:26:42.011432" level="INFO">&amp;{deleteReq_body} = { ID=blow9000 }</msg>
+<var>&amp;{deleteReq_body}</var>
+<arg>ID=${book_ID}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-27T20:26:42.011092" elapsed="0.000385"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2025-04-27T20:26:43.436829" level="INFO">POST Request : url=https://rahulshettyacademy.com/Library/DeleteBook.php 
+ path_url=/Library/DeleteBook.php 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '18', 'Content-Type': 'application/json'} 
+ body=b'{"ID": "blow9000"}' 
+ </msg>
+<msg time="2025-04-27T20:26:43.436902" level="INFO">POST Response : url=https://rahulshettyacademy.com/Library/DeleteBook.php 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 27 Apr 2025 14:56:44 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With', 'Content-Length': '38', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'application/json;charset=UTF-8'} 
+ body={"msg":"book is successfully deleted"} 
+ </msg>
+<msg time="2025-04-27T20:26:43.436996" level="INFO">${delete_response} = &lt;Response [200]&gt;</msg>
+<var>${delete_response}</var>
+<arg>${base_url}/Library/DeleteBook.php</arg>
+<arg>json=${deleteReq_body}</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2025-04-27T20:26:42.011756" elapsed="1.425255"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-27T20:26:43.438538" level="INFO">{'msg': 'book is successfully deleted'}</msg>
+<arg>${delete_response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-27T20:26:43.438033" elapsed="0.000583"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>book is successfully deleted</arg>
+<arg>${delete_response.json()}[msg]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-27T20:26:43.438828" elapsed="0.000391"/>
+</kw>
+<status status="PASS" start="2025-04-27T20:26:42.010550" elapsed="1.428843"/>
+</test>
+<doc>This robot file is to learn Dictionary in python</doc>
+<status status="PASS" start="2025-04-27T20:26:41.060607" elapsed="2.379524"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">SMOKE</stat>
 </tag>
 <suite>
-<stat name="testDemo2" id="s1" pass="1" fail="0" skip="0">testDemo2</stat>
+<stat name="testDemo7" id="s1" pass="4" fail="0" skip="0">testDemo7</stat>
 </suite>
 </statistics>
 <errors>
